@@ -48,6 +48,7 @@ def mult():
             <input type = "text" name="n1"/>
             <label>N2:</label>
             <input type = "text" name="n2"/>
+            
             <input type="submit"/>
         </form>
         '''
@@ -62,6 +63,9 @@ def resultado():
         num2= request.form.get("n2")
         return "<h1>La multiplicacion es: {} </h1>".format(str(int(num1)*int(num2)))
 
+@app.route("/formulario2")
+def formulario2():
+    return render_template("formulario2.html")
 #Metodo que inicializa la aplicacion del proyecto
 
 if __name__ == "__main__":
